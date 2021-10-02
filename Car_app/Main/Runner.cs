@@ -20,7 +20,7 @@ namespace Car_app.Main
             Console.WriteLine("hello");
         }
 
-        private void run() 
+        public void run() 
         {
             Console.WriteLine("Welcome to your car dealership software! by Luis & Victor ");
             bool run = true;
@@ -108,7 +108,7 @@ namespace Car_app.Main
             car.HeadlightType = Console.ReadLine();
             Console.WriteLine("how many miles does the car have");
             car.Mileage = Int32.Parse(Console.ReadLine());
-            Console.Write("what kind of drivetrain does it have");
+            Console.WriteLine("what kind of drivetrain does it have");
                 car.Drivetrain = Console.ReadLine();
             Console.WriteLine("what kind of engine does it have");
             car.Engine = Console.ReadLine();
@@ -116,6 +116,11 @@ namespace Car_app.Main
             car.Color = Console.ReadLine();
             Console.WriteLine("who is the manufacturer");
             car.Manufacturer = Console.ReadLine();
+
+            Console.WriteLine("Added the following car: ");
+            car.printProperties();
+            Console.ReadLine();
+            vehicleList.Add(car);
         }
 
         private void addEV() 

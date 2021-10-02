@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Car_app.Main;
+using System;
 
 namespace Car_app
 {
@@ -6,7 +7,8 @@ namespace Car_app
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Runner r = new Runner();
+            r.run();
         }
     }
 }
