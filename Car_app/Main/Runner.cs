@@ -92,11 +92,30 @@ namespace Car_app.Main
         public string Color { get; set; }
         public string Manufacturer { get; set; }*/
 
+            //Int32.Parse(Console.ReadLine());
+
             GasCar car = new GasCar();
 
             Console.WriteLine("What Body Type does it have?");
             car.Body_Type = Console.ReadLine();
-
+            Console.WriteLine("What Oil Type does it have");
+                car.OilType = Console.ReadLine();
+            Console.WriteLine("What Gas Type does it take");
+                car.GasType = Console.ReadLine();
+            Console.WriteLine("how many MPG does it get");
+            car.MPG = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("what kind of headlights does it have");
+            car.HeadlightType = Console.ReadLine();
+            Console.WriteLine("how many miles does the car have");
+            car.Mileage = Int32.Parse(Console.ReadLine());
+            Console.Write("what kind of drivetrain does it have");
+                car.Drivetrain = Console.ReadLine();
+            Console.WriteLine("what kind of engine does it have");
+            car.Engine = Console.ReadLine();
+            Console.WriteLine("what kind of color is it");
+            car.Color = Console.ReadLine();
+            Console.WriteLine("who is the manufacturer");
+            car.Manufacturer = Console.ReadLine();
         }
 
         private void addEV() 
