@@ -18,6 +18,19 @@ namespace Car_app.VehicleCLasses
 
         public GasCar()
         { }
-        
+
+        public void printProperties()
+        {
+            Console.WriteLine($"Body Type: {Body_Type}");
+            Console.WriteLine($"Oil Type: {OilType}");
+            Console.WriteLine($"Gas Type: {GasType}");
+            Console.WriteLine($"MPG: {MPG}");
+            Console.WriteLine($"Headlight Type: {HeadlightType}");
+            Console.WriteLine($"Mileage: {Mileage}");
+            Console.WriteLine($"Drivetrain: {Drivetrain}");
+            Console.WriteLine($"Engine: {Engine}");
+            Console.WriteLine($"Color: {Color}");
+            Console.WriteLine($"Manufacturer: {Manufacturer}");
+        }
     }
 }

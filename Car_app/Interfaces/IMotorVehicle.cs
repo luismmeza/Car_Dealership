@@ -13,5 +13,7 @@ namespace Car_app.Interfaces
         public string Color { get; set; }
         public string Manufacturer { get; set; }
 
+        public void printProperties();
+
     }
 }
