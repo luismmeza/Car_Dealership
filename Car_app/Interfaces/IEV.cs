@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Car_app.Interfaces
 {
-    public interface IEV
+    public interface IEV: IMotorVehicle
     {
         public int MilesPerCharge { get; set; }
         public int MinutesToCharge { get; set; }
