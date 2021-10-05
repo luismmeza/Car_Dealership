@@ -6,7 +6,7 @@ Inventory Console APP, for Car dealerships.
 As a [ROLE] I would like to [ACTION]
 
 [DONE]	As a Car dealership manager, I would like to add a car to a list
-[]	As a Car dealership manager I would like to delete a car from the list
+[DONE]	As a Car dealership manager I would like to delete a car from the list
 [DONE]	As a Car dealership manager, I would like to see a list of all the cars I own
 []	As a Car dealership employee I would like to login before the app starts
 []	As a Car dealership Manager I would like to add a value to all my vehicles

@@ -10,9 +10,13 @@ namespace Car_app.Main
     {
         string answer;
         List<IMotorVehicle> vehicleList;
+        List<string> mainmenulist;
+        List<string> deletemenulist;
         public Runner() 
         {
+            mainmenulist = new List<string> { "What would you like to do?", "1. Add A Car" , "2. See my cars!", "3. delete a car" };
             vehicleList = new List<IMotorVehicle>();
+            deletemenulist = new List<string> { "1. see all cars", "2. enter index number" };
         }
 
         private void sayHello() 
@@ -23,12 +27,11 @@ namespace Car_app.Main
         public void run() 
         {
             Console.WriteLine("Welcome to your car dealership software! by Luis & Victor ");
+
             bool run = true;
             while (run) 
             {
-                Console.WriteLine("What would you like to do?");
-                Console.WriteLine("1. Add A Car");
-                Console.WriteLine("2. See my cars!");
+                printalloptions(mainmenulist);
                 string answer = Console.ReadLine();
                 switch (answer) 
                 {
@@ -38,20 +41,29 @@ namespace Car_app.Main
                     case "2":
                         printAllCars();
                         break;
+                    case "3":
+                        deletecar();
+                        break;
                     default:
                         break;
+
                 }
             }
         }
 
         private void printAllCars() 
         {
-            foreach (var car in vehicleList) 
+            for (int a = 0;a < vehicleList.Count; a++)
             {
                 Console.WriteLine("===================");
+
+                var car = vehicleList[a];
                 car.printProperties();
+                Console.WriteLine(a);
                 Console.WriteLine("===================");
+
             }
+
         }
         private void addCar() 
         {
@@ -127,7 +139,7 @@ namespace Car_app.Main
         {
             /*public string BodyType { get; set; }
         public int MilesPerCharge { get; set; }
-        public int MinutesToCharge { get; set; }
+        public int MinutesToCharge  { get; set; }
         public string HeadlightType { get; set; }
         public int Mileage { get; set; }
         public string Drivetrain { get; set; }
@@ -159,5 +171,57 @@ namespace Car_app.Main
             Console.ReadLine();
             vehicleList.Add(ev);
         }
+
+        private void printalloptions(List<string> options)
+        {
+            Console.WriteLine("??????????????????????");
+            foreach(string option in options)
+            {
+                Console.WriteLine(option);
+
+            }
+            Console.WriteLine("??????????????????????");
+        }
+
+        private void deletecar()
+        {
+            Console.WriteLine("what car do you want to delete");
+            printalloptions(deletemenulist);
+            string response = Console.ReadLine();
+            switch (response)
+            {
+                case "1":
+                    printAllCars();
+                    break;
+                case "2":
+                    Console.WriteLine("please type index number here");
+                    string answer = Console.ReadLine();
+                    vehicleList.RemoveAt(Int32.Parse(answer));
+                    break;
+                default:
+                    Console.WriteLine("this is not an option, please pick one listed");
+                    break;
+
+
+            }
+            
+        }
     }
 }
+
+
+
+
+/*
+ 
+ string[] a = new string[3]
+ 
+ a[0] = "sample1"
+ a[1] = "sample2"
+ a[2] = "sample3"
+ 
+ 
+ 
+ 
+ 
+ */
